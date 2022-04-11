@@ -1,0 +1,70 @@
+%
+% package setting and
+% macro for mathematical formulations, references and itemization.
+%
+% 2009. 6.18. Created.
+% 2018. 4. 5. Last updated.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% package setting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}   % assumes amsmath package installed
+\usepackage{amssymb}   % assumes amsmath package installed
+\usepackage{enumerate} %
+
+\def\fnum@figure{Fig.~\thefigure}
+\def\fnum@table{Table \thetable}
+
+% -----------------------------------------------------------------------------
+% figure
+% -----------------------------------------------------------------------------
+%\setlength{\abovecaptionskip}{5pt}
+%\setlength{\belowcaptionskip}{-10pt}
+%\renewcommand{\belowcaptionskip}{-10pt}
+
+% =============================================================================
+% macro
+% =============================================================================
+% -----------------------------------------------------------------------------
+% boldmath
+% -----------------------------------------------------------------------------
+\newcommand{\bm}[1]{\mbox{\boldmath $ #1 $}}
+
+% -----------------------------------------------------------------------------
+% matrix
+% -----------------------------------------------------------------------------
+\def\Mat#1#2{\left[ \begin{array}{#1}#2\end{array} \right ]}
+
+% -----------------------------------------------------------------------------
+% partial differential
+% -----------------------------------------------------------------------------
+\newcommand{\pdif}[2]{\dfrac{\partial #1}{\partial #2}}
+
+% =============================================================================
+% reference
+% =============================================================================
+\newcommand{\figref}[1]{{Fig. \ref{#1}}}
+
+\newcommand{\tabref}[1]{{Table \ref{#1}}}
+
+\renewcommand{\eqref}[1]{{式(\ref{#1})}}
+
+\newcommand{\chapref}[1]{{\ref{#1}}}
+\newcommand{\sectref}[1]{{\ref{#1}}}
+\newcommand{\apdxref}[1]{{\ref{#1}}}
+
+% =============================================================================
+% itemization
+% =============================================================================
+\newcommand{\jdescriptionlabel}[1]{\hspace{.5zw}\mbox{\bfseries #1\/}\hfil}
+\newenvironment{jdescription}[1]{%
+  \vspace{.5\baselineskip}
+  \begin{list}{}{%
+    \let\makelabel\jdescriptionlabel%
+    \settowidth{\labelwidth}{\hspace*{.5zw}{\bfseries #1\/}}%
+    \setlength{\leftmargin}{\labelwidth}%
+    \setlength{\topsep}{0zw}%
+    \setlength{\parsep}{0pt}}%
+  }{\end{list}\vspace{.5\baselineskip}}

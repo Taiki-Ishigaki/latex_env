@@ -1,0 +1,8 @@
+{
+    "extensions.ignoreRecommendations": false,
+
+    "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
+    "latex-workshop.docker.enabled": true,
+    "latex-workshop.docker.image.latex": "pman0214/alpine-texlive-ja-epspdf",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+}
