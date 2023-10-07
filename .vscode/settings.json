@@ -1,8 +1,24 @@
 {
     "extensions.ignoreRecommendations": false,
 
-    "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
     "latex-workshop.docker.enabled": true,
     "latex-workshop.docker.image.latex": "pman0214/alpine-texlive-ja-epspdf",
     "latex-workshop.latex.autoBuild.run": "onFileChange",
+
+    "latex-workshop.latex.recipes": [{
+        "name": "ptex2pdf",
+        "tools": [
+          "ptex2pdf"
+        ] 
+    }],
+    "latex-workshop.latex.tools": [{
+        "name": "ptex2pdf",
+        "command": "ptex2pdf",
+        "args": [
+            "-l",
+            "-ot",
+            "-kanji=utf8 -synctex=1",
+            "%DOC%"
+        ]
+    }],
 }
