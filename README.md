@@ -6,5 +6,9 @@ sudo apt install texlive-full
 ```
 
 ## Install Latex Workshop
-拡張機能のタブ(Cntrl + Shift + X)の検索欄で@recommendedで出てくる
-Latex Workshopをインストール
+Latex Workshopをインストール (拡張機能のタブ(Cntrl + Shift + X)の検索欄で"Latex Workshop"か@recommendedと打つと出てくる)
+
+## How to Compile
+```
+latexmk
+```
