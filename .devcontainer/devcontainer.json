@@ -1,0 +1,9 @@
+{
+	"name": "TeX Live base",
+	"dockerFile": "../dockerfile",
+	"customizations": {
+			"vscode": {
+					"extensions": ["james-yu.latex-workshop"]
+			}
+	}
+}
